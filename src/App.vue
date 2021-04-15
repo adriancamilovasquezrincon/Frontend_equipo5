@@ -1,12 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <login/>
+    <roles/>
   </div>
 </template>
+<script>
+import login from './components/login.vue'
+import roles from './components/roles.vue'
+export default {
+  name:"app",
+  components: {
+    login,
+    roles
+  },
+  data() {
+    return {
+      
+    }
+  },
+}
+</script>
 
 <style>
 #app {
@@ -17,16 +30,4 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
